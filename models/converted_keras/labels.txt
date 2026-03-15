@@ -1,0 +1,20 @@
+0 Borneo Camphor
+1 Cork Oak
+2 Dove Tree
+3 Florida Torreya
+4 Ghost Gum
+5 Himalayan Cedar
+6 Japanese Yew
+7 Kauri Tree
+8 Macadamia Nut
+9 Palo Verde
+10 Sierra Magnolia
+11 Sumatran Rafflesia
+12 Tamarind Tree
+13 Western Silvery Oak
+14 Hainan Yellowwood
+15 Norfolk Island
+16 Dwarf Cypress
+17 Living Stone
+18 Giant Sequoia
+19 Bottlebrush Tree

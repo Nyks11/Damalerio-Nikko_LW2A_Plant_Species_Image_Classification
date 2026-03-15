@@ -237,3 +237,136 @@ Below are the 20 plant species used in this image classification project. Each s
 250-300 (unbalanced distribution across classes)
 
 ![Model Training Details](model_training_details/model_training.png)  
+
+---
+
+## D. Model Evaluation
+
+---
+
+### 1. Confusion Matrix
+
+![Confusion Matrix](model_evaluation/confusion_matrix.png)
+
+---
+
+### 2. Accuracy per Class
+
+![Accuracy per Class](model_evaluation/accuracy_per_class.png)
+
+---
+
+### 3. Overall Model Accuracy
+
+![Overall Accuracy](model_evaluation/accuracy_and_loss_epoch.png)
+
+---
+
+## E. Model Testing
+
+### Test 1
+![Test 1](test_images/test01.png)
+
+### Test 2
+![Test 2](test_images/test02.png)
+
+### Test 3
+![Test 3](test_images/test03.png)
+
+### Test 4
+![Test 4](test_images/test04.png)
+
+### Test 5
+![Test 5](test_images/test05.png)
+
+### Test 6
+![Test 6](test_images/test06.png)
+
+### Test 7
+![Test 7](test_images/test07.png)
+
+### Test 8
+![Test 8](test_images/test08.png)
+
+### Test 9
+![Test 9](test_images/test09.png)
+
+### Test 10
+![Test 10](test_images/test10.png)
+
+---
+
+## Reflection Questions
+
+### 1. How did the number of images per class affect your model's accuracy?
+
+Answer: The classes with more examples were usually recognized more confidently, while classes with fewer or more varied samples had weaker consistency. Since my dataset is not perfectly balanced, some categories likely became easier for the model to memorize. This showed me that class balance is just as important as total dataset size.
+
+---
+
+### 2. Which plant species were most commonly misclassified and why?
+
+Answer: Misclassification happened more often between species with close visual traits, especially plants with similar leaf textures, branch structure, or green-dominant color tones. In some test images, background clutter also distracted the model from the plant itself. This suggests the model may rely on broad shape and color cues before finer botanical details.
+
+---
+
+### 3. How did changing the epochs, batch size, or learning rate affect the training results?
+
+Answer:
+- Epochs: More epochs improved training metrics at first, but after a point the gains became small, which can be a sign that the model is nearing overfitting.
+- Batch size: A larger batch size made training smoother and faster per step, but it can reduce the model's ability to generalize if too large.
+- Learning rate: Keeping 0.001 gave stable convergence; when tuning around this value, I noticed that too high became unstable while too low slowed progress significantly.
+
+These adjustments helped me understand that better accuracy comes from balanced tuning, not from maximizing a single parameter.
+
+---
+
+### 4. What challenges did you encounter during dataset collection and labeling?
+
+Answer:
+- Gathering enough clean images per species took the most time.
+- Some classes had inconsistent framing, distance, and lighting, which increased variation.
+- Similar-looking species made manual labeling more error-prone.
+
+Because of these issues, I learned that careful folder organization and repeated label checking are essential before training.
+
+---
+
+### 5. If you were to improve your model, what specific changes would you make and why?
+
+Answer:
+- Rebalance the dataset so each class has a similar image count.
+- Add stronger preprocessing and augmentation (crop consistency, brightness normalization, rotation, and slight zoom).
+- Collect more hard examples for confusing class pairs.
+- Run multiple training trials with different epoch and batch-size combinations, then compare validation behavior.
+- Test a transfer-learning workflow to improve feature extraction for visually similar species.
+
+These changes would likely improve both class-level precision and overall robustness on unseen images.
+
+---
+
+## Submission Checklist
+
+- [x] **20 related plant species proposed**  
+	See [Section B: Plant Species Overview](#b-plant-species-overview) for details.
+
+- [x] **Minimum 250 images per species**  
+	Images are stored in the [plant_images/](plant_images/) folder.
+
+- [x] **Model trained using Teachable Machine**  
+	Training details are in [Section C: Model Training Details](#c-model-training-details).
+
+- [x] **Under-the-hood evaluation screenshots**  
+	Confusion matrix, per-class accuracy, and overall accuracy are in [Section D: Model Evaluation](#d-model-evaluation).
+
+- [x] **10 preview testing screenshots**  
+	See [Section E: Model Testing](#e-model-testing) for all screenshots.
+
+- [x] **Model exported and saved**  
+	Exported model files are in the [models/](models/) folder.
+
+- [x] **GitHub repository with complete README.md**  
+	You are currently viewing it here.
+
+- [x] **All files and screenshots uploaded and documented**  
+	Check [plant_images/](plant_images/), [models/](models/), [model_training_details/](model_training_details/), [model_evaluation/](model_evaluation/), and [test_images/](test_images/) folders for completeness.
